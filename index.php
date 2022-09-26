@@ -16,10 +16,16 @@ class Movie {
             $this->language = 'en';
         }
     }
+    public function printMovie() {
+        echo 'Il film è: ' . $this->originalName . '<br>' . "E' stato girato in: " . $this->language . '<br>' . 'Il genere è:' . $this->genre ;
+    }
 }
 
 $rocky = new Movie('rocky','en','action');
 
+
 var_dump($rocky) ;
+$rocky-> printMovie();
+
 
 // $topGun = new Movie('topGun', 'action');
