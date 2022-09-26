@@ -1,27 +1,27 @@
 <?php
 class Movie {
     public $originalName;
-    public $language;
     public $genre;
+    public $language;
 
-    function __construct($originalName, $language, $genre)
+    function __construct($originalName, $genre, $language)
     {
         $this->originalName = $originalName;
-        $this->setLanguage($language);
         $this->genre = $genre;
+        $this->setLanguage($language);
     }
 
-    public function setLanguage($language){
+    public function setLanguage(){
         if (!isset($language)) {
             $this->language = 'en';
         }
     }
     public function printMovie() {
-        echo 'Il film è: ' . $this->originalName . '<br>' . "E' stato girato in: " . $this->language . '<br>' . 'Il genere è:' . $this->genre ;
+        echo 'Il film è: ' . $this->originalName . '<br>' . "Il genere è: " . $this->genre . '<br>' . "E'stato girato in:" . $this->language ;
     }
 }
 
-$rocky = new Movie('rocky','en','action');
+$rocky = new Movie('rocky','action','it');
 
 
 var_dump($rocky) ;
