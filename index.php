@@ -14,6 +14,8 @@ class Movie {
     public function setLanguage(){
         if (!isset($language)) {
             $this->language = 'en';
+        } else {
+            $this->language = $language;
         }
     }
     public function printMovie() {
