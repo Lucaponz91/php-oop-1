@@ -25,6 +25,7 @@ class Movie {
             $this->language = $language;
         }
     }
+    
     public function printMovie() {
         echo 'Il film è: ' . $this->originalName . '<br>' . "Il genere è: " . $this->genre . '<br>' . "E'stato girato in:" . $this->language ;
     }
@@ -37,4 +38,3 @@ var_dump($rocky) ;
 $rocky-> printMovie();
 
 
-// $topGun = new Movie('topGun', 'action');
